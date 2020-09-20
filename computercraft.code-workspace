@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"Lua.diagnostics.globals": [
+			"turtle",
+			"nav",
+			"gps",
+			"term",
+			"ui",
+			"keys",
+			"fs",
+			"shell",
+			"settings",
+			"argparse"
+		]
+	}
+}

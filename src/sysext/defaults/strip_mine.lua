@@ -1,0 +1,1 @@
+print('Strip miner active!')
