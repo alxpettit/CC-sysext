@@ -18,6 +18,8 @@ end
 local startup_program = nil
 local prev_arg = nil
 
+
+-- TODO: replace this with argparse lib code
 for i=1,#arg do
     if prev_arg then
         if prev_arg == '--select' then
@@ -46,7 +48,7 @@ for i=1,#arg do
 end
 
 if continue then
-    settings.load('.config')
+    settings.load('sysext.config')
     if startup_program == nil then
         startup_program = settings.get('startup_program')
     end
@@ -58,7 +60,7 @@ if continue then
     end
 
     settings.set('startup_program', startup_program)
-    settings.save('.config')
+    settings.save('sysext.config')
 
     print('Running:', startup_program)
     shell.run(bin_dir .. startup_program)
